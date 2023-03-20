@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(images/bg-desktop.svg);
+  background-color: hsl(257, 40%, 49%);
+  background-size: cover;
+  background-position: top left;
+  padding: 0 5%;
+  gap: 3rem;
+}
+body .logo {
+  position: absolute;
+  left: 5%;
+  top: 2rem;
+}
+body .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  right: 5%;
+  bottom: 2rem;
+}
+body .social-icons .fa {
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+body .social-icons .fa:hover {
+  border-color: hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+}
+body .left-img {
+  padding-top: 10vh;
+  flex-basis: 100%;
+  width: 100%;
+}
+body .right-content {
+  flex-basis: 90%;
+}
+body .right-content .title {
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+body .right-content .text {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin: 1.5rem 0;
+}
+body .right-content .btn {
+  display: inline-block;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(257, 40%, 49%);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.4);
+}
+body .right-content .btn:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(300, 69%, 71%);
+}
+
+@media screen and (max-width: 978px) {
+  body {
+    flex-direction: column;
+    text-align: center;
+    gap: 3.5rem !important;
+    background-image: url(images/bg-mobile.svg) !important;
+  }
+  body .left-img {
+    padding-top: 15vh !important;
+  }
+  body .right-content {
+    padding-bottom: 20vh;
+  }
+  body .logo {
+    width: 200px;
+  }
+  body .title {
+    font-size: 2.2rem !important;
+  }
+}/*# sourceMappingURL=style.css.map */

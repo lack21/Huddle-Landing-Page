@@ -1,0 +1,134 @@
+// lear
+// Huddle Landing Page
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// Colors
+$violet: hsl(257, 40%, 49%);
+$softMagenta: hsl(300, 69%, 71%);
+$white: hsl(0, 0, 100%);
+$darkGray: hsla(0, 0, 0, 0.4);
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(images/bg-desktop.svg);
+  background-color: $violet;
+  background-size: cover;
+  background-position: top left;
+  padding: 0 5%;
+  gap: 3rem;
+
+  .logo {
+    position: absolute;
+    left: 5%;
+    top: 2rem;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    right: 5%;
+    bottom: 2rem;
+
+    .fa {
+      display: grid;
+      place-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $white;
+      color: $white;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $softMagenta;
+        color: $softMagenta;
+      }
+    }
+  }
+
+  .left-img {
+    padding-top: 10vh;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .right-content {
+    flex-basis: 90%;
+
+    .title {
+      font-size: 2.5rem;
+      color: $white;
+      font-weight: 600;
+    }
+
+    .text {
+      color: $white;
+      font-weight: 400;
+      line-height: 1.8rem;
+      margin: 1.5rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+      background-color: $white;
+      color: $violet;
+      border-radius: 2rem;
+      -webkit-border-radius: 2rem;
+      -moz-border-radius: 2rem;
+      -ms-border-radius: 2rem;
+      -o-border-radius: 2rem;
+      box-shadow: 0 0.5rem 1rem $darkGray;
+
+      &:hover {
+        color: $white;
+        background-color: $softMagenta;
+      }
+    }
+  }
+}
+
+// For Smaller Devices
+@media screen and (max-width: 978px) {
+  body {
+    flex-direction: column;
+    text-align: center;
+    gap: 3.5rem !important;
+    background-image: url(images/bg-mobile.svg) !important;
+
+    .left-img {
+      padding-top: 15vh !important;
+    }
+
+    .right-content {
+      padding-bottom: 20vh;
+    }
+
+    .logo {
+      width: 200px;
+    }
+
+    .title {
+      font-size: 2.2rem !important;
+    }
+  }
+}
